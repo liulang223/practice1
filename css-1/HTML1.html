@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+#p1{
+    background: #fff url("eclipse_update_120.jpg") no-repeat center top;
+    color: #000;
+    height: 500px;
+    width: 500px;
+}
+#p2{
+    font-size: 60px;
+}
+.cls{
+    background: #fff;
+    color: #000;
+}
+#triangle{
+    /*border: 50px solid #ff0000;*/
+    border-width: 50px;
+    border-style:solid;
+
+}
+
+        <!--内部样式-- >
+    </style>
+    <!--rgb 红绿蓝-->
+    <!--外部样式-->
+    <!--<link rel="stylesheet" href="CSS1.css">-->
+</head>
+<body>
+    <!--内联样式-->
+   <!--<h1 style="background: azure;color: green ">唯物主义 </h1>-->
+<!--<div style=""> 唯心主义</div>-->
+<h1> Hello</h1>
+<p id="p1" class="cls">world</p>
+<div>
+    <p id="p2" class="cls">pppp</p>样式</div>
+<span id="span1"> 自动长大</span>
+<div id="triangle"></div>
+</body>
+</html>
+<!--
+块级元素（block ）h1-h6 p div ul ol li 自己占一行 在不设置宽度情况下 充满父元素
+行级元素（inline） span  a 行级元素和行级元素在一行 不能设置宽高 宽高是内容撑开的
+-->
+<!--
+css选择器：
+1.标签/元素选择器 div{} p{}
+2.id选择器 唯一 #id{}
+3.class选择器 可重复的 .class{}
+4.后代选择器 空格 #div .class div{}
+5.子代选择器 #div2 > .aa{} IE6不支持
+6.分组选择器 .aa,.bb,.cc{}
+7.伪类选择器 #market:hover{} IE6只支持a标签
+选择器权重值
+!important > 内联 > id > class > 标签>
+从右向左判定
+
+-->
+<!--
+W3C标准盒模型
+元素+内边距padding+边框border+外边距margin（body自带8px外边距）
+-->

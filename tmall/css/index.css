@@ -1,0 +1,122 @@
+/* css reset */
+#top-con{
+    background: rgb(61,51,208) center no-repeat url(../img/top-img.jpg) ;
+    height: 80px;
+    display: block;
+}
+#header{
+    background: #f2f2f2;
+    height: 32px;
+    line-height: 32px;
+}
+#quick-menu{
+    float: right;
+}
+#login-info{
+    float: left;
+}
+#quick-menu > li{
+    float: left;
+    padding:0 14px;
+    cursor: pointer;
+    position: relative;
+}
+#header a,#login-info span,.submenu{
+    font-size: 12px;
+    color: #999;
+}
+#login-info a{
+    margin-left:10px;
+}
+#login-info a:hover{
+    color: #FF0036;
+}
+#quick-menu .iconfont{
+    color: #FF0036;
+    font-size: 12px;
+}
+#quick-menu .split{
+    height: 14px;
+    width: 1px;
+    margin:9px 0 0 14px;
+    background: #ccc;
+    padding: 0;
+}
+#quick-menu a:hover{
+    color: #FF0036;
+}
+#quick-menu .listytle:hover {
+    background: #ffffff;
+}
+#quick-menu .listytle::after{
+    content: '';
+    width: 0;
+    border-width:3px;
+    border-style: solid;
+    border-color: #bbbbbb transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5px;
+    right: 4px;
+}
+#quick-menu .listytle:hover::after{
+    transform: rotate(180deg);
+    transform-origin:3px 1.5px;
+    transition:transform .5s ease;
+}
+#quick-menu .submenu{
+    display: none;
+    position: absolute;
+    width: 74px;
+    background: #fff;
+}
+#quick-menu :hover .submenu{
+    display:block;
+}
+#quick-menu .submenu li:hover{
+    color: #FF0036;
+}
+#quick-menu .submenu > a{
+    display: block;
+    position: absolute;
+}
+.listytle{
+    position: relative;
+}
+.ew:hover .ew1{
+    display: block;
+}
+.ew1{
+display: none;
+    position: absolute;
+    width: 175px;
+    height: 227px;
+    background: #fff url(../favicon.ico) no-repeat center;
+    left: -48px;
+    top: 26px;
+}
+.menu-bd {
+    width: 122px;
+    position: absolute;
+    display: none;
+    background: #ffffff;
+
+}
+.menu-bd li{
+    border-bottom: 1px dotted #827777
+}
+.listytle:hover .menu-bd {
+    display: inline-block;
+}
+.menu-bd a{
+    width:48px;
+    margin-right: 10px;
+}
+.site-map{
+    position: absolute;
+    display: none;
+}
+.site-list{
+    display:none;
+    position: absolute;
+}

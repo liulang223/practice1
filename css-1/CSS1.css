@@ -1,0 +1,20 @@
+h1{
+    background: black;
+    color: azure;
+}
+p{
+    background: #000000;
+    color: azure;
+}
+div{
+
+    width: 200px;
+    height: 200px;
+    background: #ffffff;
+}
+span{
+    width:200px;
+    height:200px;
+    background: black;
+    color: white;
+}

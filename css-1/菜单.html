@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+#menu{
+    width: 500px;
+    height: 20px;
+}
+        #menu li{
+            list-style:none;
+            float: left;
+            background: red;
+            margin-right:5px;
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        #menu >li:hover{
+            background: #ffffff;
+        }
+        #menu li a{
+            display: block;
+            text-decoration: none;
+            color: #000000;
+        }
+        #menu #submenu{
+            cursor: pointer;
+
+        }
+        #submenu{
+            display: none;
+        }
+        #menu li:hover #submenu{
+            display: block;
+        }
+        #menu #submenu li:hover{
+            background: #999999;
+        }
+
+
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li>
+        <a href="">Link One</a>
+        <ul id="submenu">
+            <li>子菜单1</li>
+            <li>子菜单2</li>
+            <li>子菜单3</li>
+            <li>子菜单4</li>
+        </ul>
+    </li>
+    <li>
+        <a href="">Link Two</a>
+        </li>
+    <li>
+        <a href="">Link Three</a>
+        </li>
+    <li>
+        <a href="">Link Four</a>
+        </li>
+</ul>
+
+</body>
+</html>
+<!--相对定位relative 原来位置
+    绝对定位absolute 最近的对已定位的祖先元素
+    固定定位fixed 浏览器窗口
+    static 默认值
+    粘性定位sticky 淘宝搜索-->
