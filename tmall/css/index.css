@@ -8,6 +8,7 @@
     background: #f2f2f2;
     height: 32px;
     line-height: 32px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0,30);
 }
 #quick-menu{
     float: right;
@@ -69,12 +70,14 @@
     position: absolute;
     width: 74px;
     background: #fff;
+
 }
 #quick-menu :hover .submenu{
     display:block;
 }
 #quick-menu .submenu li:hover{
     color: #FF0036;
+    text-decoration: underline;
 }
 #quick-menu .submenu > a{
     display: block;
@@ -95,6 +98,18 @@ display: none;
     left: -48px;
     top: 26px;
 }
+.ew .ew1 b{
+    width: 0;
+    height: 0;
+    line-height: 0;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    margin-left: -2px;
+    border-width: 5px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #fff;
+}
 .menu-bd {
     width: 122px;
     position: absolute;
@@ -112,11 +127,68 @@ display: none;
     width:48px;
     margin-right: 10px;
 }
-.site-map{
+.site-list h3{
+    color: #f56a00;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+.dh{
     position: absolute;
     display: none;
 }
-.site-list{
-    display:none;
-    position: absolute;
+#logo-search{
+    margin-top:2px;
 }
+#logo{
+    float: left;
+}
+#logo-search .wrapper .search{
+    float: left;
+    margin-top: 38px;
+}
+.search form{
+    width: 625px;
+    height: 36px;
+    border: 2px solid #FF0036;
+}
+.search .search-ipt{
+    width: 493px;
+    height: 36px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    text-indent: 10px;
+}
+.search .search-btn {
+    width: 128px;
+    height: 36px;
+    border: none;
+    float:right;
+    outline:none;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 5px;
+    background: #FF0036;
+}
+.hot-query{
+    margin-top:4px;
+}
+.search .hot{
+    float: left;
+    border-right:1px solid #999;
+    padding:0 12px;
+}
+.search .hot a{
+    color: #999999;
+    font-size: 14px;
+}
+.search .hot-red a{
+    color:#FF0036;
+}
+.search .last{
+    border-right: none;
+}
+
+
+
+
