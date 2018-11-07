@@ -3,41 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--<style>-->
+        <!--#header div{-->
+            <!--height: 50px;-->
+            <!--width: 50px;-->
+            <!--border: 1px solid #ff0000;-->
+        <!--}-->
+        <!--#header{-->
+            <!--position: relative;-->
+        <!--}-->
+        <!--.one{-->
+            <!--position: absolute;-->
+        <!--}-->
+        <!--.two{-->
+            <!--position: absolute;-->
+            <!--left:50px;-->
+        <!--}-->
+        <!--.three{-->
+            <!--position: absolute;-->
+            <!--top: 50px;-->
+        <!--}-->
+        <!--.four{-->
+            <!--position: absolute;-->
+            <!--top: 50px;-->
+            <!--left:  50px;-->
+        <!--}-->
+        <!--#header div:hover {-->
+            <!--border: #00ff00 1px solid;-->
+        <!--}-->
+    <!--/*</style>*/-->
     <style>
-        #header div{
-            height: 50px;
-            width: 50px;
-            border: 1px solid #ff0000;
-        }
-        #header{
-            position: relative;
-        }
-        .one{
-            position: absolute;
-        }
-        .two{
-            position: absolute;
-            left:50px;
-        }
-        .three{
-            position: absolute;
-            top: 50px;
-        }
-        .four{
-            position: absolute;
-            top: 50px;
-            left:  50px;
-        }
-        #header div:hover {
-            border: #00ff00 1px solid;
-        }
+ .brand {
+     height: 160px;
+     width: 320px;
+     float: left;
+     text-align: center;
+ }
+  .one{
+     border-top: 5px solid #999999;
+     border-left:5px solid #999999;
+      border-right:2px solid #999999;
+      border-bottom: 5px solid #9999;
+ }
+  .two{
+      border-top: 5px solid #999999;
+      border-bottom: 5px solid #9999;
+      border-right:2px solid #999999;
+  }
+ li{
+     list-style: none;
+ }
+ img{
+     border: 0;
+     margin-top: 34px;
+ }
+ .brand span{
+     display: block;
+ }
+.money{
+    color: #ff0000;
+}
+        
     </style>
 </head>
 <body>
-<div id="header">
-<div class="one"></div>
-    <div class="two"></div>
-<div class="three"></div>
-    <div class="four"></div></div>
+<ul id="header">
+<li class="brand one">
+    <img src="S.jpg" alt="">
+    <span>S</span>
+    <span class="money">￥1799.00</span>
+</li>
+<li class="brand two">
+    <img src="lining.jpg" alt="">
+    <span>李宁</span>
+    <span class="money">￥4754.00</span>
+
+</li>
+    </ul>
+<!--<div id="header">-->
+<!--<div class="one"></div>-->
+    <!--<div class="two"></div>-->
+<!--<div class="three"></div>-->
+    <!--<div class="four"></div></div>-->
 </body>
 </html>
