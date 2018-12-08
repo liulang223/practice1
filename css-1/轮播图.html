@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+      <style>
+          *{
+              margin:0;
+              padding:0;
+          }
+          li{
+            list-style-type: none;
+          }
+          .container{
+           position: relative;
+            margin: 100px auto;
+            width: 520px;
+            height: 280px;
+          }
+         #imgs img{
+            display:none;
+         }
+         #imgs .selected{
+             display:block;
+         }
+         #nav li,#arrows span{
+             height: 20px;
+              width: 20px;
+              cursor: pointer;
+              background: #000;
+              color: #ffffff;
+              float: left;
+              text-align: center;
+             line-height: 20px;
+             margin-left: 4px;
+         }
+         #nav .nav-selected{
+             background: orange;
+         }
+         #nav{
+             position: absolute;
+             top: 240px;
+             left: 420px;
+         }
+         #arrows{
+             top:240px;
+             position: absolute;
+         }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div id='imgs'>
+             <img  src="img/1.jpg" alt="" class="selected" >
+            <img src="img/2.jpg" alt="">  
+             <img src="img/3.jpg" alt=""> 
+           <img src="img/4.jpg" alt=""> 
+        </div>
+          <ul id='nav'>
+              <li class='nav-selected'>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+          </ul>
+          <span id='arrows'>
+              <span class='prev'>&lt;</span>
+              <span class='next'>&gt;</span>
+          </span>
+
+    </div>
+    <script>
+        var oimgs=document.getElementById('imgs');
+        var oimg=oimgs.getElementsByTagName('img');
+        var nav=document.getElementById('nav');
+        var nav1=nav.getElementsByTagName('li');
+        var oprev=document.getElementsByClassName('prev');
+        var onext=document.getElementsByClassName('next');
+        var Index;
+        for(i=0;i<oimg.length;i++) {
+            nav1[i].index=i;
+            nav1[i].onmouseover=function(){
+                Index=this.index;
+                for(j=0;j<nav1.length;j++){
+                    oimg[j].className='';
+                    nav1[j].className='';
+                }
+                this.className='nav-selected';
+                oimg[this.index].className='selected';
+                
+            }
+        }
+        oprev.onclick=function(){
+            Index--;
+            for(var i=0;i<nav1.length;i++){
+                oimg[i].className='';
+                nav1[i].className='';
+               }
+            oimg[Index].className='selected';
+            nav1[Index].className='nav-selected';
+        }
+        onext.onclick=function(){
+        }
+        
+    </script>
+</body>
+</html>
