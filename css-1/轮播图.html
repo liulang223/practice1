@@ -13,7 +13,7 @@
           li{
             list-style-type: none;
           }
-          .container{
+          #container{
            position: relative;
             margin: 100px auto;
             width: 520px;
@@ -51,7 +51,7 @@
       </style>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <div id='imgs'>
              <img  src="img/1.jpg" alt="" class="selected" >
             <img src="img/2.jpg" alt="">  
@@ -65,8 +65,8 @@
               <li>4</li>
           </ul>
           <span id='arrows'>
-              <span class='prev'>&lt;</span>
-              <span class='next'>&gt;</span>
+              <span id='prev'>&lt;</span>
+              <span id='next'>&gt;</span>
           </span>
 
     </div>
@@ -75,33 +75,51 @@
         var oimg=oimgs.getElementsByTagName('img');
         var nav=document.getElementById('nav');
         var nav1=nav.getElementsByTagName('li');
-        var oprev=document.getElementsByClassName('prev');
-        var onext=document.getElementsByClassName('next');
-        var Index;
+        var oprev=document.getElementById('prev');
+        var onext=document.getElementById('next');
+        var Index=0;
+        var ocontainer=document.getElementById('container');
+        var timer=null;
+    
         for(i=0;i<oimg.length;i++) {
             nav1[i].index=i;
             nav1[i].onmouseover=function(){
                 Index=this.index;
-                for(j=0;j<nav1.length;j++){
-                    oimg[j].className='';
-                    nav1[j].className='';
-                }
-                this.className='nav-selected';
-                oimg[this.index].className='selected';
+       changeimg();
                 
             }
         }
-        oprev.onclick=function(){
-            Index--;
-            for(var i=0;i<nav1.length;i++){
-                oimg[i].className='';
-                nav1[i].className='';
+        onext.onclick=oprev.onclick=function(){
+            if(this===onext){
+                Index++;
+            }else{Index--;}
+            if(Index==-1) {Index=nav1.length-1;}
+            if(Index==nav1.length){ Index=0;}
+           changeimg();
+        }
+     function changeimg(){
+        for(var j=0;j<nav1.length;j++){
+                oimg[j].className='';
+                nav1[j].className='';
                }
             oimg[Index].className='selected';
             nav1[Index].className='nav-selected';
-        }
-        onext.onclick=function(){
-        }
+     } 
+
+     function play(){
+         timer=setInterval(function(){
+         onext.onclick();
+         },1000);
+     }
+     play();
+      ocontainer.onmouseover=function(){
+          clearInterval(timer);
+      }
+      ocontainer.onmouseout=function(){
+         play();
+     };
+
+            
         
     </script>
 </body>
