@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #progress{
+            height: 20px;
+            background:#000;
+            border-radius: 5px;
+        }
+        #bar{
+            width:100px;
+            height: 100%;
+            border-radius: 5px 0 0 5px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id='progress'>
+        <div id='bar'></div>
+</div>
+<script>
+    var obar=document.getElementById('bar');
+    var oprogress=document.getElementById('progress');
+    var step=0;
+    function run(){
+        step++;
+        obar.style.width=step+'%';
+        obar.innerHTML=step+'%';
+        if(obar.offsetWidth<oprogress.offsetWidth){
+             requestAnimationFrame(run)
+        }
+          
+    }
+    run();
+
+</script>
+</body>
+</html>
