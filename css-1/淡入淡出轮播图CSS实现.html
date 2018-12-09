@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #imgs{
+            position: relative;
+        }
+        #imgs .banner{
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            opacity:0;
+        }
+        .banner1{
+            background: red;
+        }
+        .banner2{
+           background:  #e8e8e8;
+        }
+        .banner3{
+            background: #1d3cbc;
+        }
+        #imgs .banner.actived{
+            opacity: 1;
+        }
+        #nav li{
+            width: 25px;
+            height: 5px;
+            float: left;
+            margin-right: 8px;
+            cursor: pointer;
+            color:black;
+            opacity: .3;
+        }
+        #nav #selected{
+            background-color: #fff;
+            opacity: .6;
+        }
+        #nav{
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            
+        }
+        #container{
+           height: 500px;
+           position: relative;
+        }
+        #nav li:last-child{
+            margin-right: 0;
+        }
+
+    </style>
+</head>
+<body>  <div id="container">
+<div id='imgs'>
+    <div class='banner banner1 actived'>
+        <img src="http://img.alicdn.com/tps/i4/TB17ITUFuuSBuNjSsplSuve8pXa.jpg" alt="">
+    </div>
+    <div class='banner banner2'>
+        <img src="https://img.alicdn.com/simba/img/TB1xIQMvH5YBuNjSspoSuveNFXa.jpg" alt="">
+    </div>
+    <div class='banner banner3'>
+        <img src="http://img.alicdn.com/imgextra/i1/114/TB2wYu7c8cXBuNjt_XoXXXIwFXa_!!114-0-luban.jpg_q100.jpg_.webp" alt="">
+    </div>
+
+ </div>
+ <ul id='nav'>
+    <li id='selected'></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+<script>
+   var onav=document.getElementById('nav');
+   var ali=onav.getElementsByTagName('li');
+   var oimg=document.getElementById('imgs');
+   var aimg=oimg.getElementsByClassName('banner');
+   for(i=0;i<ali.length;i++){
+       ali[i].index=i;
+       ali[i].onmouseover=function(){
+           for(j=0;j<ali.length;j++){
+               ali[j].id='';
+               aimg[j].className='banner  banner'+(j+1);
+
+           }
+           this.id='selected';
+           aimg[this.index].className+=' actived';
+
+       };
+   }
+</script> 
+</body>
+</html>
