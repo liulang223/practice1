@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #square {
+            position: absolute;
+            height: 100px;
+            overflow: hidden;
+            width: 880px;
+        }
+
+        #square div {
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            line-height: 50px;
+            background: #000;
+            float: left;
+            margin-left: 10px;
+            color: #fff;
+        }
+
+        #container {
+            height: 200px;
+            position: relative;
+            border: 1px solid #000;
+            width: 300px;
+            margin-top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        #direction div {
+            float: left;
+            background: #ccc;
+            text-align: center;
+            height: 20px;
+            line-height: 20px;
+            width: 40px;
+            cursor: pointer;
+        }
+
+        #direction {
+            bottom: 20px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #right {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='container'>
+        <div id='square'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div id="direction">
+            <div id='left'>向左</div>
+            <div id='right'>向右</div>
+        </div>
+    </div>   
+    <script>
+        var odiv = document.getElementById('square');
+        odiv.innerHTML += odiv.innerHTML;
+        var oright = document.getElementById('right');
+        var oleft = document.getElementById('left');
+        var speed = 10;
+        setInterval(function () {
+            odiv.style.left = odiv.offsetLeft - speed + 'px';
+            if (-odiv.offsetLeft >= odiv.offsetWidth / 2) {
+                odiv.style.left = 0;
+            }
+            if (odiv.offsetLeft >0) {
+                odiv.style.left = -odiv.offsetWidth / 2 + 'px';
+            }
+
+        }, 100);
+        oleft.onmouseover = function () {
+            speed = 10;
+        }
+       oright.onmouseover=function(){
+           speed= -10;
+       }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

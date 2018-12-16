@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #small {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+        }
+
+        #big {
+            /* display: none; */
+        }
+
+        #drag {
+            width: 100px;
+            height: 100px;
+            background: #aaaaaa;
+            position: absolute;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id='container'>
+        <img src="18_放大镜/1.jpg" alt="" id='small'>
+        <div id='drag'></div>
+        <img src="18_放大镜/2.jpg" alt="" id='big'>
+    </div>
+
+    <script>
+        var osmall = document.getElementById('small');
+        var odrag = document.getElementById('drag');
+        odrag.addEventListener('mouseover', function (e) {
+            e = e || window.event;
+            var idisX = e.clientX - odrag.offsetLeft;
+            var idisY = e.clientY - odrag.offsetTop;
+            var fn = function (e) {
+                e = e || window.event;
+                odrag.style.left = e.clientX - idisX + 'px';
+                odrag.style.top = e.clientY - idisY + 'px';
+            }
+            osmall.addEventListener('mousemove', fn);
+            osmall.addEventListener('mouseup', function () {
+                osmall.removeEventListener('mousemove', fn);
+            })
+
+        }
+        )
+
+    </script>
+</body>
+
+</html>

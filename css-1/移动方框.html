@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #drag {
+            background: #000;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='drag'></div>
+    <script>
+        var odrag = document.getElementById('drag');
+        odrag.addEventListener('mousedown', function (e) {
+            e = e || window.event;
+            var idisX = e.clientX - odrag.offsetLeft;
+            var idisY = e.clientY - odrag.offsetTop;
+            var fn = function (e) {
+                e = e || window.event;
+                odrag.style.left = e.clientX - idisX + 'px';
+                odrag.style.top = e.clientY - idisY + 'px';
+            }
+            document.addEventListener('mousemove', fn);
+            odrag.addEventListener('mouseup', function () {
+                document.removeEventListener('mousemove', fn);
+            })
+        })
+    </script>
+
+
+
+</body>
+
+</html>
