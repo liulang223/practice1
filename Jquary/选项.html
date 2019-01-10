@@ -22,7 +22,7 @@
       color:white;
     }
   </style>
-  <script src="./JS/jquery-3.3.1.min.js"></script>
+  
 </head>
 <body>
         <div class="centent">
@@ -49,17 +49,28 @@
           <span id="remove">&lt;&lt;选中删除到左边</span>
           <span id="remove_all">&lt;&lt;全部删除到左边</span>
         </div>
-        <script>
-          $("#add").click(function(){
-              $("#select2").append("#select1 option");
-          })
-          $("#add_all").click(function(){
-              $('#select2').append("#select1 option");
-          })
-          $("remove").on("click",'#select2 option',function(){
-              $()
-          })
-        </script>
+        <script src="./JS/jquery-3.3.1.min.js"></script>
+    <script>
+      $('#add_all').click(function(){
+        $('#select2').append($('#select1 option'));
+      })
+      $('#remove_all').click(function(){
+        $('#select1').append($('#select2 option'));
+      })
+      $('#add').click(function(){
+        $('#select2').append($('#select1 option:selected'));
+      })
+      $('#remove').click(function(){
+        $('#select1').append($('#select2 option:selected'));
+      })
+      $('#select1').on('dblclick','option',function(){
+        $(this).appendTo('#select2');
+      })
+      $('#select2').on('dblclick','option',function(){
+        $(this).appendTo('#select1');
+      })
+     
+    </script>
     
 </body>
 </html>
