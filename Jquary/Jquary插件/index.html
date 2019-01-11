@@ -89,7 +89,15 @@
           </div>
           <script src="./js/jquery-3.3.1.min.js"></script>
           <script>
-            var osp=$('slider-panner');
+         $.fn.extend({
+
+          LBT: function(obj){ 
+              var defaultset={
+                  time=1000;
+                  img:[];
+
+              }
+              var osp=$('slider-panner');
             var sw=0;
             var number=$('ul li')
             number.on('mouseover',function(){
@@ -101,18 +109,16 @@
                  sw++;
                  if(sw==number.length) {sw=0;}
                  number.eq(sw).triggerHandler('mouseover');
-               },1000);
+               },time);
             }
             play();
             
             $('.slider').hover(function(){
-                sw=osp.index();
-                sw++;
-                if(sw==number.lenth){sw=0;}
                 clearInterval(timer);
             },function(){
              play();
             });
+        });
           </script>
         </body>
         </html>
