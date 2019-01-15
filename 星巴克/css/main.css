@@ -1,0 +1,259 @@
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+}
+html{
+    font-size:62.5% !important;
+    height: 100%;
+}
+a{
+    color: #00A862;
+    cursor: pointer;
+    text-decoration: none;
+}
+body{
+    color: rgba(0,0,0,0.87);
+    font-size: 1.6rem;
+    font-weight:400;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+/*nav开始*/
+@media (min-width:1025px){
+#nav{
+   background: #fff;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 4px rgba(0,0,0,0.12);
+    position: fixed;
+    width: 30%;
+  }
+#nav > .container{
+    height: 100%;
+    width: 100%;
+}
+.container .primary{
+    max-width:calc(100% - 72px) ;
+    overflow: hidden;
+}
+.container .body{
+    height: calc(100% - 98px);
+    display: table;
+    width: 100%;
+}
+.body #account-entry{
+    vertical-align: middle;
+    padding:0 24px 0 84px;
+    display: table-cell;
+    height: 100%;
+}
+#nav .overlay {
+    background-color: #fff;
+    position: fixed;
+    width: 30%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.overlay #body #middle,.overlay #body #footer{
+    padding:0 24px 0 84px; 
+}
+}
+@media (max-width: 1024px) and (min-width: 641px){
+    #nav .container .header {
+        padding: 16px;
+        width: 100%;
+    }
+    .icon{
+        margin-right: 40px;
+    }
+    #nav .container .body{
+        width: 100%;
+        padding: 0 16px 0 16px;
+    }
+    .overlay{
+        right: 0;
+
+    }
+ 
+}
+@media (max-width: 640px){
+     #nav .container .header{
+         display: none;
+     }
+    #nav .container .account{
+        display: none;
+    }
+}
+
+
+#nav .container .header {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 24px;
+    position: relative;
+}
+.container{
+    overflow: hidden;
+}
+#nav .logo{
+    float:left;
+    margin-right: 12px;
+    width: 36px;
+}
+.container .primary{
+    display: inline-block;
+}
+.container .primary li{
+    float:left;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 5px 10px 5px;
+    cursor: pointer;
+}   
+.container .header .icon{
+    border: 0;
+    outline: none;
+    float: right;
+}
+ .header .icon img{
+     display: block;
+     height: 24px;
+     opacity: 0.8;
+ }
+ .contaiiner .header::after{
+     clear: both;
+     content: '';
+     display: table;
+ }
+ 
+ .container .body .display-1{
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+ }
+ .sign-in{
+     margin-right:20px;
+ }
+.body .sign-in img{
+     margin-right: 4px;
+     vertical-align: middle;
+     margin-top: -5px;
+ }
+ .button{
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    padding: 9px 15px 5px 15px;
+    margin-left: 20px;
+
+ }
+/*nav结束*/
+/*overlay开始*/
+.overlay{
+    visibility: hidden;
+    opacity: 0;
+    background: #fff;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 4px rgba(0,0,0,0.12);
+    position: fixed;
+}
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+.overlay #header{
+    padding: 24px;
+}
+.overlay #header .logo{
+    float: left;   
+}
+.overlay #header .close{
+    float: right;
+    background: url('https://www.starbucks.com.cn/assets/icons/icon-close.svg');
+    width: 48px;
+    height: 48px;
+    outline: none;
+    background-repeat: no-repeat;
+    border: 0;
+    background-position: center;
+}
+.overlay #container .body{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.overlay #body #middle{
+    vertical-align: middle;
+    display: table-cell;
+    padding-left: 84px;
+    padding-right: 24px;
+}
+
+ #middle ul >li{
+    color: inherit;
+    padding: 8px 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+ }
+/*overlay结束*/
+/*content开始*/
+
+@media (min-width:1025px){
+     #content{
+        width: 70%;
+        margin-left:30%;
+        height:500px;
+    }
+    .show-mobile{
+        display: none;
+      }
+}
+@media (max-width:1024px) and (min-width:641px){
+    #content{
+        width: 100%;
+    }
+    .show-mobile{
+        display: none;
+      }
+}
+@media (max-width: 640px){
+    .mobile-hidden{
+        display: none
+      }
+}
+#content .hero{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+#content .hero li{
+    float: left;
+    width: 20%;
+}
+#content .hero img{
+    width: 100%;
+}
+#content .hero #control{
+    position: absolute;
+    top:50%;
+    right: 40px;
+    transform: translateY(-50%);
+    background: url('https://www.starbucks.com.cn/assets/icons/icon-arrow-white.svg') no-repeat;
+    width: 48px;
+    height: 48px;
+    z-index: 10;
+}
+
+
+
+/*content结束*/

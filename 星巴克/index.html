@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Navigation panel -->
+        <div id="nav">
+            <div class="container">
+                <div class="header">
+                    <a class='logo' href="">
+                        <img src="https://www.starbucks.com.cn/assets/images/logo.svg" alt="">
+                    </a>
+                    <div class="primary">
+                        <ul>
+                            <li>门店</li>
+                            <li>我的账户</li>
+                            <li>菜单</li>
+                        </ul>
+                    </div>
+                    <a class="icon" href="javascript:void(0);">
+                        <img src="https://www.starbucks.com.cn/assets/icons/icon-hamburger.svg" alt="">
+                    </a>
+                </div>
+                <div class="body">
+                    <div id="account-entry">
+                        <div id="ba-text">
+                            <span>
+                                <div class="display-1">
+                                    <span>心情惬意，来杯咖啡吧&nbsp;☕</span>
+                                </div>
+                                <div class="account">
+                                    <a href="" class="sign-in">
+                                        <img src="https://www.starbucks.com.cn/assets/icons/icon-account.svg" alt="">
+                                        <span>登录</span>
+                                    </a>
+                                    <a class='button' class='register' href="">
+                                        <span>注册</span>
+                                    </a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay" class="overlay">
+                <div id="container">
+                    <div id="header">
+                        <a class='logo' href="">
+                            <img src="https://www.starbucks.com.cn/assets/images/logo.svg" alt="">
+                        </a>
+                        <button class="close"></button>
+                    </div>
+                    <div id="body">
+                        <div id="middle">
+                            <ul>
+                                <li>门店</li>
+                                <li>星享俱乐部</li>
+                                <li>菜单</li>
+                                <li></li>
+                                <li>星巴克移动应用</li>
+                                <li>星礼卡</li>
+                                <li>
+                                    星巴克臻选™
+                                </li>
+                                <li>
+                                    专星送™
+                                </li>
+                                <li>咖啡星讲堂</li>
+                                <li>上海烘培工坊</li>
+                                <li>关于星巴克</li>
+                                <li>帮助中心</li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div id="footer">
+                            <div id="account-logout">
+                                <div class="account">
+                                    <a href="" class="sign-in">
+                                        <img src="https://www.starbucks.com.cn/assets/icons/icon-account.svg" alt="">
+                                        <span>登录</span>
+                                    </a>
+                                    <a class='button' class='register' href="">
+                                        <span>注册</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="foot">
+                        <div class="container">
+                            <a href=""> English</a>
+                            <a id="privacy-collapse" href=""> 隐私政策</a>
+                            <a id="terms-collapse" href=""> 使用条款</a>
+                            <div class="legal">
+                                <div class="license">
+                                    <span>
+                                        <a href="">
+                                            <img width="10" height="10" src="">&nbsp;沪公网安备
+                                            31010402000318号
+                                        </a>
+                                    </span> |
+                                    <a href="" target="_blank">沪ICP备17003747号</a>
+                                </div>
+                                <!-- <div class='copyright'>© 2017 Starbucks Corporation.</div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div id="content">
+            <div class='hero'>
+                <ul class='imgcontrol clearfix'>
+                    <li>
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv3.jpg" class="mobile-hidden">
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv5-mobile.jpg" class="show-mobile">
+                    </li>
+                    <li>
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv-0.jpg" class="mobile-hidden">
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv-0-mobile.jpg" class="show-mobile">
+                    </li>
+                    <li>
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv1.jpg" class="mobile-hidden">
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv1-mobile.jpg" class="show-mobile">
+                    </li>
+                    <li>
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv2.jpg" class="mobile-hidden">
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv2-mobile.jpg" class="show-mobile">
+                    </li>
+                    <li>
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv3.jpg" class="mobile-hidden">
+                        <img src="https://www.starbucks.com.cn/assets/images/featured/2019cny1/kv5-mobile.jpg" class="show-mobile">
+                    </li>
+                </ul>
+                <div id="control"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $('.icon').click(function () {
+            $('.overlay').addClass('active');
+        })
+        $(".close").click(function () {
+            $('.overlay').removeClass('active');
+        })
+        var nowwidth = 0;
+        var nowindex=0;
+        $('#control').click(function(){
+            change();
+        })
+    function change(){
+        var trans=++nowindex*nowwidth;
+            $('.imgcontrol').css({
+                transform:'translateX('+(-trans)+'px)',
+                transition:'all 0.1s ease'
+            })
+            if(nowindex==4){
+                setTimeout(function(){
+               $('.imgcontrol').css({
+                   transform:'translateX(opx)'
+               })
+               nowindex=0;
+            },300)
+        }
+    }
+        function play(){
+          setInterval(function(){change();
+        },3000);
+        }
+        play();
+        returnwidth();
+        function returnwidth() {
+            nowwidth = $(document).width();
+            if (nowwidth > 1024) {
+                nowwidth =nowwidth*0.7;
+            }
+            $('.imgcontrol').width(nowwidth * 5);
+        }
+        function run(){
+            var trans=nowindex*nowwidth;
+            $('.imgcontrol').css({
+                transform: 'translateX('+(-trans)+'px)',
+                transition: 'none'
+            })
+        }
+        $(window).resize(function(){
+      returnwidth();
+      run();
+    })
+    </script>
+</body>
+
+</html>
