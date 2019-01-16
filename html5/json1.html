@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj1={
+            age: '18',
+            sex: 'girl',
+            parent:{
+                qq:'11112',
+            }
+        }
+        function clone(obj){
+            var thisobj={};
+            for(var item in obj){
+                if(typeof obj[item]=='object'){
+                    thisobj[item]=clone(obj[item])
+                }else{
+                    thisobj[itme]=obj[item]
+                }
+            }
+            return thisobj;
+        }
+          var obj2=JSON.stringify(obj1);
+          console.log(JSON.parse(obj2));
+          
+
+    </script>
+</body>
+</html>
