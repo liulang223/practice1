@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #scro li {
+            list-style: none;
+            background: #000;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+
+        }
+        #scro {
+            width: 400px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 20px;
+            margin-bottom: -20px;
+        }
+
+        #container {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id=container>
+        <div id='scro'>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <button class='btn-left'>向左</button>
+    <button class='btn-right'>向右</button>
+    <script>
+        $('.btn-left').click(function(){
+            run('left');
+        })
+        $('.btn-right').click(function () {
+            run('right');
+        })
+        $('#scro').scroll(function () {
+            scrol();
+        })
+        function run(dir) {
+            var nowleft = $('#scro').scrollLeft();
+            var nowwith = dir == 'left' ? nowleft-300 : nowleft+300
+            $('#scro').animate({
+                scrollLeft: nowwith
+            }, 1000,function(){
+                scrol();
+            })
+        }
+        function scrol() {
+            var scrollLeft = $('#scro').scrollLeft();
+            var scrwidth = $('#scro').width();
+            var nowwidth = $('#scro').get(0).scrollWidth;
+            $('.btn-left').show();
+            $('.btn-right').show();
+            if (scrollLeft == 0) {
+                $('.btn-left').hide();
+            } else if (scrollLeft+scrwidth == nowwidth) {
+                $('.btn-right').hide();
+            }
+        }
+    </script>
+</body>
+
+</html>
