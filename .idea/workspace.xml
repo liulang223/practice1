@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89c20d99-c6c0-43ad-84b6-a1e57d4b27d9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css-1/放大镜.html" beforeDir="false" afterPath="$PROJECT_DIR$/css-1/放大镜.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,10 +17,10 @@
   <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="测试.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="测试.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css-1/测试.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
+            <state relative-caret-position="25">
               <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
             </state>
           </provider>
@@ -33,11 +33,6 @@
               <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="轮播图.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css-1/轮播图.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="右键菜单.html" pinned="false" current-in-tab="false">
@@ -126,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,6 +137,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,6 +224,7 @@
       <workItem from="1544247339991" duration="397000" />
       <workItem from="1544255692680" duration="169000" />
       <workItem from="1546936555360" duration="131000" />
+      <workItem from="1547713166447" duration="593000" />
     </task>
     <task id="LOCAL-00001" summary="实例1.0">
       <created>1539421345566</created>
@@ -304,11 +300,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102772000" />
+    <option name="totallyTimeSpent" value="103365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="68" y="20" width="1400" height="776" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963924" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -344,6 +339,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="轮播图" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tmall/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmall/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8875">
+          <caret line="355" column="29" selection-start-line="355" selection-start-column="29" selection-end-line="355" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tmall/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -637,7 +646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css-1/测试.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
+        <state relative-caret-position="25">
           <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
         </state>
       </provider>
@@ -662,12 +671,6 @@
           <caret line="70" selection-start-line="70" selection-end-line="71" />
         </state>
       </provider>
-    </entry>
-    <entry file="http://https://github.com/fengchuanyu/fellow29.git">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css-1/轮播图.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
