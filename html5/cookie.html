@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    function    setCookie(key,val,expires/*时间*/){  
+        var timer=new Date();
+        timer.setDate(timer.getDate()+parseInt(expires)); 
+     document.cookie=key+'='+val+';expires='+timer.toUTCString();  
+      }
+    setCookie('text','123','1');
+    function getCookie(key){
+        var nowcookie=document.cookie;
+        var arr=[];
+        arr=nowcookie.split(';'); 
+        for(var i=0;i<arr.length;i++){
+          if(arr[i].split('=')[0]=key){
+       return(arr[i].split('=')[1]);
+       }
+        }
+    }
+   console.log(getCookie('text')); 
+    function delCookie(key){
+        var timer=new Date();
+        timer.setDate(timer.getDate()-1);
+        document.cookie=key+'=null;expires='+timer.toUTCString();
+    }
+     delCookie('text');
+    </script>
+</body>
+</html>
