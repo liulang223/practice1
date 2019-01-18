@@ -1,0 +1,17 @@
+div{
+    background: #000;
+}
+li{
+    display: block;
+}
+$color:'red';
+ul{
+    color:$color;
+      
+}
+$color:#489;
+div{
+
+  color: lighten($color,20%);
+  background-color: transparentize($color,	0.3);
+}  

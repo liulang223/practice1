@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="89c20d99-c6c0-43ad-84b6-a1e57d4b27d9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html5/sass/style" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -101,6 +102,8 @@
         <option value="$PROJECT_DIR$/tmall/css/index.css" />
         <option value="$PROJECT_DIR$/css-1/测试.html" />
         <option value="$PROJECT_DIR$/css-1/五环.html" />
+        <option value="$PROJECT_DIR$/html5/sass/text.sass" />
+        <option value="$PROJECT_DIR$/html5/sass/text.scss" />
       </list>
     </option>
   </component>
@@ -121,6 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,13 +135,12 @@
             <path>
               <item name="liulang0" type="b2602c69:ProjectViewProjectNode" />
               <item name="liulang0" type="462c0819:PsiDirectoryNode" />
-              <item name="css-1" type="462c0819:PsiDirectoryNode" />
+              <item name="html5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,7 +170,7 @@
     <property name="node.js.selected.package.prettier" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -225,6 +228,8 @@
       <workItem from="1544255692680" duration="169000" />
       <workItem from="1546936555360" duration="131000" />
       <workItem from="1547713166447" duration="593000" />
+      <workItem from="1547733234787" duration="335000" />
+      <workItem from="1547781517272" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="实例1.0">
       <created>1539421345566</created>
@@ -300,19 +305,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103365000" />
+    <option name="totallyTimeSpent" value="103731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="68" y="20" width="1400" height="776" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963924" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963924" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32930514" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32930514" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286385" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.31722054" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -322,7 +327,7 @@
       <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32930514" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286385" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +344,27 @@
     <option name="LAST_COMMIT_MESSAGE" value="轮播图" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css-1/五环.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css-1/右键菜单.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css-1/选项卡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1750">
+          <caret line="70" selection-start-line="70" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tmall/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -353,28 +379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmall/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmall/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8875">
-          <caret line="355" column="29" lean-forward="true" selection-start-line="355" selection-start-column="29" selection-end-line="355" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css-1/菜单.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1925">
-          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML2.html" />
     <entry file="file://$PROJECT_DIR$/tmall/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -644,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css-1/测试.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css-1/五环.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1025">
@@ -669,6 +666,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1750">
           <caret line="70" selection-start-line="70" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css-1/测试.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5/sass/text.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
