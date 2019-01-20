@@ -11,8 +11,14 @@
     // argument
     // ...arg 代替参数
     function foo(...arg){
-        console.log(...arg);
+        console.log(arg);
     }
+    foo('a','b','c','d');
+    let arr=['a','b','c']
+    let arr1=['d','e']
+     console.log(arr.concat(arr1));//实现连接
+    let arr2=[...arr,'f','g']//半深克隆
+     
     // ...arr引用
     //基本数据类型 null number string 布尔 undefind
     // 引用数据类型 object 数组arr function
