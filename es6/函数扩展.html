@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function foo(name,age='20'){
+         console.log('name:',name);
+         console.log('age=',age);
+         
+    }
+    foo('zs',30);
+    foo.length//有默认值的形参前的没有默认值形参个数
+    foo.name//当前函数的函数名
+     'use strict';//开启严格模式
+    /* ①全局变量必须显式声明
+       ②禁止this关键字指向全局对象 构造函数必须new   构造函数.prototype.方法名（）
+       ③函数不能有重名的参数 function foo(a,a,c)数据覆盖 后面覆盖前面
+       ④禁止使用with语句 
+       ⑤禁止使用arguments.callee()
+
+       ①开启在函数内部
+       ②ES6:规定只要函数参数使用了默认值、解构赋值、或者
+       扩展运算符，那么函数内部就不能显式设定为严格模式，
+       否则会报错。
+       严格模式好处：
+        - 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异
+        行为;
+        - 消除代码运行的一些不安全之处，保证代码运行的安全；
+        - 提高编译器效率，增加运行速度；
+        - 为未来新版本的Javascript做好铺垫。
+       */
+    //  MDN 文档    
+    </script>
+</body>
+</html>

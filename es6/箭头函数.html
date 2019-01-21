@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   /* 箭头函数 =>
+(1)函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+(2)不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
+(3)不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest	参
+数代替  */
+// function foo(a,b){
+//     console.log(a+b);
+    
+// }
+// foo(1,2);
+let foo= (a,b) => {
+    console.log(a+b);
+    console.log(this);
+    
+}
+foo(1,2);
+    </script>
+</body>
+</html>
