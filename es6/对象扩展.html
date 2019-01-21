@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+     /*   对象扩展
+①属性简洁表示法 包括属性和方法
+②属性名表达式 :[]
+③Object.is(‘foo’, ‘foo’); 比较两个值是否严格相等，与严格比较运
+算符（===）的行为基本一致 +0===-0 true  NaN===NaN false
+Object.is(+0,-0) false  Object.is(NaN,NaN) true
+ ④Object.assign(); 对象合并,第一个参数是目标对象，后面的参数
+都是源对象。浅拷贝 指向同一地址
+⑤‘name’		in		obj 判断对象是否包含某个属性
+0	in	arr 判断数组位置是否有值  判断索引*/
+
+
+
+    // var name='ls';
+    // var key='name';//引用加[]
+    // var obj={
+    //     name:name,
+    //     [key]:name,
+    // }
+    // console.log(obj);
+ 
+    var name='ls';
+    var obj2={
+        name,
+        age:20,
+        showInfo(){
+            console.log(this.name);
+            
+        }
+    }//简化方法
+    // ==判断值  ===判断地址
+   // null typeof为 object
+    
+    </script>
+</body>
+</html>
