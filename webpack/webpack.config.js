@@ -2,13 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const glob = require('glob');
+const glob=require('glob');
 const PurifyCSSPlugin = require('purifycss-webpack');
+const entry = require('./webpack_config/entry_webpack.js');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode: 'development',
-    entry:{
-        'index':"./src/index.js"
-    },
+    entry: entry,
     output:{
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
@@ -53,7 +53,7 @@ module.exports = {
            },{
                test:/\.(jsx|js)$/,
                use:{
-                   loader:'bable-loader',
+                   loader:'babel-loader',//cnpm install -D babel-loader@7 babel-core babel-preset-env
                    options:{
                        presets:[
                            'env','react'
@@ -76,9 +76,17 @@ module.exports = {
         }),
         new ExtractTextPlugin('./css/main.css'),
         new PurifyCSSPlugin({
-            pashs: glob.sync(path.join(__dirname, 'src/*.html')),
-        })
-    ],
+            paths:glob.sync(path.resolve(__dirname,'src/*.html'))
+          }),
+        new webpack.BannerPlugin('知否知否，应是绿肥红瘦'),
+        new webpack.ProvidePlugin({
+            $: 'jquery'
+        }),
+        new CopyWebpackPlugin([{
+            from: __dirname + '/src/public',
+            to: './public'
+        }])
+        ],
     devServer:{
      contentBase: path.resolve(__dirname,'dist'),
      host:'127.0.0.1',
