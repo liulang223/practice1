@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'> </script>
+</head>
+<body>
+    <div id='app'>
+            <ul>
+                    <li v-for="(val,key,index) in obj">{{val}}=={{key}}==={{index}}</li>
+                </ul>
+                <ul>
+                    <li v-for='(val,index) in arr'>{{val}}----{{index}}</li>
+                </ul>
+           <div v-text='text' v-if='inShow==1'>1</div> 
+           <div v-else-if='inShow==2'>2</div>
+           <div v-else>其他</div>
+           <div v-html='html' v-show='isVShow'></div>    
+    </div>
+    
+    <script>
+        let vm=new Vue({
+            el:'#app',
+            data:{
+                msg:'hello world',
+                msg2:'hello vue',
+                arr:[1,2,3,4,5,6],
+                inShow:1,
+                isVShow:true,
+                obj:{
+                name:'zs',
+                age:'19',
+                sex:'girl'
+            },
+            text:'hello world',
+            html:'<h1>hello world</h1>'
+            }
+          
+        })
+    </script>
+</body>
+</html>
