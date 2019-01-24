@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'> </script>
+<style>
+.div1{
+    width: 500px;
+    height: 500px;
+    background: #000;
+}
+.div2{
+    width: 250px;
+    height: 250px;
+    background: #fff;
+}
+</style>
+</head>
+
+<body>
+    <div id='app'>
+        <!-- <div v-pre>//原样输出
+      {{text}}
+    </div> -->
+        <input type="text" v-on="{mousedown:dothis,mouseup:dothat}">
+        <div class='div1' @click.once='div1click'>
+            <div class='div2' @click.stop='div2click'>
+            
+            </div>
+        </div>
+        <a href="http://www.baidu.com" @click.prevent>百度</a>
+        <input type="text" @keyup.enter='enterx' >
+    </div>
+    <script>
+        // .enter 回车渲染
+// .prevert 取消原始操作
+// .stop 取消冒泡
+//v-cloak 渲染完成后显示
+// v-once 只渲染一次
+        new Vue({
+            el: '#app',
+            data: {
+
+            },
+            methods: {
+                dothis() {
+                    console.log('dothis');
+
+                },
+                dothat() {
+                    console.log('dothat');
+
+                },
+                div1click(){
+                    console.log('div1');
+                    
+                },
+                div2click(){
+                    console.log('div2');
+                    
+                },
+                enterx(){
+                   console.log('回车');
+                   
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

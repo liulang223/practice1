@@ -9,20 +9,38 @@
 </head>
 <body>
     <div id='app'>
-        <button v-on:click='test(2,$event)'>按钮</button>
-     {{num}}
+        <div>
+            <button v-on:click='test(2,$event)'>按钮</button>
+            {{num1}}
+        </div>
+        <div>
+            <button v-on:click='test2(2,$event)'>按钮</button>
+            {{num2}}
+        </div>
+        {{sum}}
     </div>
     <script>
     let vm = new Vue({
         el:'#app',
         data:{
-            num:1
+            num1:1,
+            num2:2
         },
         methods:{
             test(i,e){
-                this.num+=i;
+                this.num1+=i;
                 console.log(e);
                 
+            },
+            test2(i,e){
+                this.num2+=i;
+                console.log(e);
+                
+            }
+        },
+        computed:{//计算属性
+            sum(){
+            return  this.num1+this.num2;
             }
         }
     })
