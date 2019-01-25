@@ -100,9 +100,11 @@
           },
          deleteitem(id){
              let thisarr=[];
-             thisarr = this.product_list.filter(function(val,index,arr){
+             thisarr = this.product_list.filter(function(val,index){
                  if(val.id != id){
                      return val
+                     
+                    
                  }
              })
              this.product_list = thisarr;
