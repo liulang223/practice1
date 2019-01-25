@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'> </script>
+</head>
+<body>
+    <div id='app'>
+      <liulang msg='hollo world'></liulang>
+      <balala></balala>
+    </div>
+    <script>
+    Vue.component('liulang',{
+        template:`
+        <div>
+            <h1>{{msg}}</h1>
+            <lufei msg='我当定了'></lufei>
+            </div>
+            `,
+            props:['msg']
+    })
+    Vue.component('lufei',{
+        template:`<h1>海贼王 {{msg}}</h1>`,
+        props: ['msg']
+    })
+    new Vue({
+        el:'#app',
+        data:{
+        },
+        components:{
+            'balala':{
+                template:`
+                <div>
+                    <lufei msg=''我当定了'> </lufei>
+                    </div>
+                `,//局部的组件不能直接调用全局组件
+                props:['msg']
+                }, 
+        }
+    })
+    </script>
+</body>
+</html>

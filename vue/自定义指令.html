@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'> </script>
+</head>
+<body>
+    <div id='app'>
+     <div v-liulang="'blue'">知否知否</div>
+    </div>
+    <script>
+    Vue.directive('liulang',function(el,binding,vnode){
+        console.log(el,binding,vnode);
+      el.style.color = binding.value;
+    })
+    new Vue({
+        el:'#app',
+        data:{
+
+        }
+    })
+    
+    </script>
+    <!-- bind:只调用一次，指令第一次绑定到
+    元素时调用，用这个钩子函数可以定
+    义一个绑定时执行一次的初始化动作。
+    • inserted:被绑定元素插入父节点时调
+    用（父节点存在即可调用，不必存在
+    于document中）。
+    • update:被绑定于元素所在的模板更新
+    时调用，而无论绑定值是否变化。通
+    过比较更新前后的绑定值，可以忽略
+    不必要的模板更新。
+    • componentUpdated:被绑定元素所在
+    模板完成一次更新周期时调用。
+    • unbind:只调用一次，指令与元素解绑
+    时调用。vm.$destroy();
+     -->
+</body>
+</html>
