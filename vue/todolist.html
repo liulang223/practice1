@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'> </script>
+    <style>
+    .active{
+        background: #888;
+    }
+    </style>
+</head>
+<body>
+    <div id='app'>
+        <h1>todolist</h1>
+        <div>
+     <input type="text" placeholder="搜索" v-model='search_text'>
+     <input type="button" value='搜索' @click='search'>
+        </div>
+        <div>
+     <input type="text" placeholder="名称" v-model='name'>
+     <input type="number" placeholder="价格" v-model='price'> 
+     <input type="button" value='添加' @click='add'>      
+        </div>
+        <table>
+            <thead>
+                <th>选择</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+                <tr v-for='(item, index) in product_list' :class="{active:item.is_selected}" @click='item.is_selected=!item.is_selected' :key='index'>
+                <td><input type="checkbox" name='cb' v-model='checkarr' :value='item.id'></td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td><input type="button" value='删除' @click='deleteitem(item.id)'></td>
+                </tr>
+                <tr>
+                    <td><button @click='del_check'>删除选中</button></td>
+                    <td >价格: {{sum}}</td>
+                </tr>  
+            </tbody>
+        </table>
+       </div>
+  
+  <script>
+  let vm=new Vue({
+      el:'#app',
+      data:{
+          now_id:'5',
+          name:'',
+          price:0,
+          search_text:'',
+          product_list:[
+              {   
+                  id:'1',
+                  name:'衣服',
+                  price:588,
+                  is_selected:false,
+              },
+              {
+                  id:'2',
+                  name:'裤子',
+                  price:199,
+                  is_selected:false,
+              },
+              {   
+                  id:'3',
+                  name:'鞋字',
+                  price:239,
+                  is_selected:false,
+              },
+              {
+                  id:'4',
+                  name:'帽子',
+                  price:159,
+                  is_selected:false,
+              },
+              {  
+                  id:'5',
+                  name:'手套',
+                  price:100,
+                  is_selected:false,
+              }
+          ],
+          classstyle:false
+      },
+      methods:{
+          del_check(){
+              let arr=[];
+              this.product_list.forEach(function(val,index){
+                  if(!val.is_selected){
+                      arr.push(val);
+                  }
+              })
+              this.product_list=arr;
+          },
+         deleteitem(id){
+             let thisarr=[];
+             thisarr = this.product_list.filter(function(val,index,arr){
+                 if(val.id != id){
+                     return val
+                 }
+             })
+             this.product_list = thisarr;
+         },
+         add(){
+             let obj = {
+                 id: ++this.now_id,
+                 name: this.name,
+                 price: this.price,
+                 is_selected:false
+             }
+             this.product_list.push(obj)
+         },
+         search(){
+          let _this=this;
+          let thisarr=[];
+          thisarr= this.product_list.filter(function(val,index){
+              if(val.name.includes(_this.search_text)){
+                  return val
+              }
+          })
+         this.product_list = thisarr;
+      }
+      },
+      computed: {
+        sum(){
+            let sumNum= 0;
+            this.product_list.forEach(function(val,index){
+                if(val.is_selected){
+                    sumNum+=val.price;
+                }
+            })
+            return sumNum;
+        },
+        checkarr(){
+            let arr = [];
+            this.product_list.forEach(function(val,index){
+                if(val.is_selected){
+                    arr.push(val.id);//将checkbox与商品联系起来
+                }
+            })
+            return arr
+        }
+      }
+     
+  })
+  </script>
+
+</body>
+</html>
