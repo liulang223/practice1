@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'> </script>
+</head>
+<body>
+    <div id='app'>
+        <fellow1 @click.native='com_handle'></fellow1> 
+    </div>
+    
+    <script>
+        // .native可以激活方法
+    new Vue({
+        el:'#app',
+      methods:{
+          com_handle(){
+              console.log(321);
+              
+          },
+      },
+      components:{
+          'fellow1':{
+              template:`
+              <div>
+              <h1>hello world</h1>
+              </div>
+              `,
+              
+          } 
+      }
+    })
+    </script>
+</body>
+</html>

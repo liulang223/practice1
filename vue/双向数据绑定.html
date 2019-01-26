@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+</head>
+<body>
+    <input type="text" name="" id="inp">
+    <p id='inp_text'></p>
+    <script>
+    var oinp=document.getElementById('inp');
+    var oinp_text=document.getElementById('inp_text');
+    var obj={text:""}
+    oinp.onkeyup = function(){
+      obj.text = this.value;
+      console.log(obj.text);
+      
+    };
+    Object.defineProperty(obj,'text',{
+        set(val){
+         oinp_text.innerText =val;
+        },
+        get(){
+           console.log('get');//当调用obj.text时调用
+           
+        }
+    })
+   
+    
+    
+    </script>
+</body>
+</html>
