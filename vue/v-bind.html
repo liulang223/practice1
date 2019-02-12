@@ -10,11 +10,15 @@
     .active{
         color:blue;
     }
+    [v-cloak]{
+        display: none;
+    }
+    /* 加载完成后显示 */
     </style>
 </head>
 <body>
-    <div id='app'>
-        <div :class='{active:classstyle}'>hello world</div>
+    <div id='app'> 
+        <div :class='{active:classstyle}' v-cloak>hello world</div>
         <img :src="'./img/'+imgsrc" alt="">
         <div :style='divstyle'>1314</div>
     </div>
