@@ -7,3 +7,5 @@
        年龄:{{$route.params.age}}
     </div>
 </template>
+
+
