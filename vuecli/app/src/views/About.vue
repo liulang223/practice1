@@ -3,3 +3,22 @@
     <h1>This is an about page</h1>
   </div>
 </template>
+<script>
+export default {
+  data(){
+    return {
+      msg:'hello world'
+    }
+  },
+  beforeRouteEnter (to, from, next) {
+    console.log(to);
+    console.log(from);
+    next();
+  },
+  beforeRouteLeave (to, from, next) {
+    console.log(to);
+    console.log(from);
+    next();
+  }
+}
+</script>

@@ -5,7 +5,7 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [{
     path: '/',
@@ -15,7 +15,12 @@ export default new Router({
   {
     path: '/about',
     name: 'about',
-    component: () => import('./views/About.vue')
+    component: () => import('./views/About.vue'),
+    // beforeEnter: (to, from, next) => {
+    //   console.log(to);
+    //   console.log(from);
+    //   next();
+    }
   },
   {
     path: '/mine',
