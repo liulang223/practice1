@@ -1,3 +1,3 @@
 <template>
-    <h1>当前页面找不到 404！</h1>
+  <img src="http://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=404&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&hd=undefined&latest=undefined&copyright=undefined&cs=2431591832,3067627706&os=508055636,2836450432&simid=0,0&pn=2&rn=1&di=51383510200&ln=1621&fr=&fmq=1550116548307_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=0&objurl=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01565959e6bcfda80121bea5beef4c.jpg%401280w_1l_2o_100sh.jpg&rpstart=0&rpnum=0&adpicid=0&force=undefined" alt="">
 </template>

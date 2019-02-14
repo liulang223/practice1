@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <button @click='back'>返回首页</button>
+      <!-- <button @click='back'>返回首页</button> -->
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>|
       <router-link to="/mine">我的</router-link>|
@@ -20,10 +20,10 @@
 <script>
 export default {
   methods:{
-    back(){
-      console.log(123);
-      this.$router.puth('/')
-    }
+    // back(){
+    //   console.log(123);
+    //   this.$router.puth("/")
+    // }
   }
 }
 </script>
