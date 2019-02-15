@@ -1,15 +1,28 @@
 <template>
   <div id="app">
-     <Navigation> </Navigation>
+     <Navigation :navVal='activeNav'> </Navigation>
     <transition>
-      <router-view/>
+      <router-view @changeNav='change'/>
     </transition>
   </div>
 </template>
 <script>
 import Navigation from '@/components/Navigation.vue'
 export default {
-  name: 'movie',
+  data(){
+    return{
+    activeNav:{
+      tittle:'電影',
+      className:'move'
+    }
+    }
+  },
+  methods:{
+   change(obj){
+     this.activeNav.tittle = obj.tittle,
+     this.className = obj.className
+   }
+  },
   components: {
    Navigation
   }
