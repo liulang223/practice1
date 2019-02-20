@@ -27,6 +27,11 @@ export default new Router({
       component: () => import('./views/chat/Chat.vue')
     },
     {
+      path: '/moviedetail',
+      name: 'moviedetail',
+      component: () => import('./views/movie/Detail.vue')
+    },
+    {
       path:'*',
       component:() => import('./views/Error.vue')
     }

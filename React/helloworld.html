@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+    <script src="./js/react.production.min.js"></script>
+    <script src='./js/react-dom.production.min.js'></script>
+    <script src='./js/browser.min.js'></script>
+</head>
+<body>
+    <div id='root'></div>
+    <script type="text/babel">
+    // let element = (
+    //     <div>
+    //     <h1>hello world!</h1>
+    //     <h2>welcome to ..</h2>
+    //     </div>
+    // );
+
+    //定义无状态组件 首字母需要大写 Welcome
+    // let Welcome= () =>{
+    //     return <h1>hello world! </h1>;
+    // };
+    // let element=<Welcome/>;
+    // ReactDOM.render(
+    //     element,
+    //     document.getElementById('root')
+    // )
+
+    //   class Welcome extends React.Component{
+    //   render(){
+    //       return <h3> hello world! </h3>
+    //   }
+    //   }
+    //   ReactDOM.render(<Welcome/>,document.getElementById('root'))
+    
+    // class Welcome extends React.Component{
+    //     render(){
+    //         return <h1> hello {this.props.name}</h1>
+    //     }
+    // };
+    // ReactDOM.render(<Welcome name='JOJO'/>,document.getElementById('root'))
+
+    // let Welcome =(props) =>{
+    //     return <h1> Hello {props.name}</h1>
+    // }
+    // ReactDOM.render(<Welcome name='KOKO'/>,document.getElementById('root'))
+    
+    // let Welcome = (props)=>{
+    //     return <h1>{props.children},{props.name} </h1>
+    // }
+    // ReactDOM.render(
+    //     <Welcome name='中国'>Hello</Welcome>,
+    //     document.getElementById('root')
+    // )
+
+    class Number extends React.Component{
+        constructor(props){
+            super(props);
+            this.state = {
+                count:1
+            };
+        };
+    add(){
+        this.setState({
+            count:this.state.count+1
+        });
+
+     }
+     render(props){
+         return
+         <div>
+            <button onClick={this.add.bind(this)}>+</button>
+            <h1>{this.state.count}</h1>
+            </div>
+     }
+    };
+    ReactDOM.render(<Number/>,document.getElementById('root'))
+    
+    </script>
+</body>
+</html>

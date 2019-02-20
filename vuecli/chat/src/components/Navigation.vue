@@ -6,7 +6,7 @@
     </header>
     <nav>
       <ul>
-        <li :class="{'active':item.className==activeClass}" v-for="(item,index) in btnList" :key="index" @click="routerPush(item)">{{item.name}}</li>
+        <li :class="{'active':item.name==activeTittle}" v-for="(item,index) in btnList" :key="index" @click="routerPush(item)">{{item.name}}</li>
       </ul>
     </nav>
   </div>
@@ -55,7 +55,7 @@ export default {
     }
   },
   watch: {
-    propVal(){
+    propsVal(){
       this.activeTittle = this.navVal.tittle,
       this.activeClass = this.navVal.className
     }
@@ -69,7 +69,8 @@ nav {
   position: fixed;
   width: 100%;
   height: 1rem;
-  background-color: rgb(33, 150, 243);
+  text-align: center;
+   background-color: rgb(33, 150, 243);
 }
  .movie header,.movie nav{
     background-color: rgb(33, 150, 243);

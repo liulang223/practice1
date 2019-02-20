@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     <Navigation :navVal='activeNav'> </Navigation>
+     <Navigation :navVal='activeNav'/> 
     <transition>
       <router-view @changeNav='change'/>
     </transition>
@@ -20,7 +20,7 @@ export default {
   methods:{
    change(obj){
      this.activeNav.tittle = obj.tittle,
-     this.className = obj.className
+     this.activeNav.className = obj.className
    }
   },
   components: {
@@ -30,11 +30,7 @@ export default {
 </script>
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding: 1rem 0;
 }
 </style>
