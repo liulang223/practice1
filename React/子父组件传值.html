@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/react.production.min.js"></script>
+    <script src='./js/react-dom.production.min.js'></script>
+    <script src='./js/browser.min.js'></script>
+</head>
+<body>
+    <div id='root'></div>
+    <script type='text/babel'>
+    class Number extends React.Component{
+        constructor(props){
+            super(props);
+            this.state = {
+                count:1
+            };
+        };
+    add(num){
+        this.setState({
+            count:this.state.count+num
+        });
+
+     }
+     changeP(num){
+        this.setState({
+            count: this.state.count+num
+        })
+     }
+     render(props){
+         return(
+         <div>
+            <button onClick={this.add.bind(this,20)}>+</button>
+            <h1>{this.state.count}</h1>
+            <h2>{this.props.msg}</h2>
+            <Number2 changeC={this.changeP.bind(this)}/>
+            </div>
+         )
+     }
+    }
+    class Number2 extends React.Component{
+        constructor(props){
+            super(props);
+        };
+        change(){
+          this.props.changeC(10);
+        }
+        render(){
+            return <button onClick={this.change.bind(this)}>+10</button>
+        }
+    }
+    ReactDOM.render(<Number msg='China'/>,document.getElementById('root'))
+    </script>
+</body>
+</html>

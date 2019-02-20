@@ -55,7 +55,7 @@
     //     <Welcome name='中国'>Hello</Welcome>,
     //     document.getElementById('root')
     // )
-
+    
     class Number extends React.Component{
         constructor(props){
             super(props);
@@ -63,21 +63,23 @@
                 count:1
             };
         };
-    add(){
+    add(num){
         this.setState({
-            count:this.state.count+1
+            count:this.state.count+num
         });
 
      }
      render(props){
-         return
+         return(
          <div>
-            <button onClick={this.add.bind(this)}>+</button>
+            <button onClick={this.add.bind(this,20)}>+</button>
             <h1>{this.state.count}</h1>
+            <h2>{this.props.msg}</h2>
             </div>
+         )
      }
-    };
-    ReactDOM.render(<Number/>,document.getElementById('root'))
+    }
+    ReactDOM.render(<Number msg='China'/>,document.getElementById('root'))
     
     </script>
 </body>
