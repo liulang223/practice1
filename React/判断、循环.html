@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/react.production.min.js"></script>
+    <script src='./js/react-dom.production.min.js'></script>
+    <script src='./js/browser.min.js'></script>
+    <style>
+    .active{
+        color:red;
+    }
+    .blue{
+        color:blue;
+    }
+    </style>
+</head>
+<body>
+    <div id='root'></div>
+    <script type='text/babel'>
+    function If() {
+        let arr=[1,2,3,4,5,6];
+        let ST=arr.map((item)=>{
+            return (<li>{item}</li>)
+        })
+        let str=null;
+        let isShow=true;
+        if(isShow){
+            str=<For1/>;
+        }else{
+            str=<For2/>
+        }
+        return <div>{str}<ul>{ST}</ul></div>
+    }
+    class For1 extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={
+                cName:'active',
+                isShow:'foo'
+            }
+        }
+        render(){
+            return <h1 className={this.state.cName}>
+            {this.state.isShow == 'foo'?<For2/>:<For1/>}
+            I am red
+            </h1>
+        }
+    }
+    class For2 extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={
+                cName:'blue',
+                arr:['a','b','c']
+            }
+        }
+        render(){
+            return <h1 className={this.state.cName}><ul>{this.state.arr.map((item,index)=><li key={index}>{item}</li>)}</ul>I am blue</h1>
+        }
+    }
+    ReactDOM.render(<div><If/></div>,document.getElementById('root'))
+    </script>
+</body>
+</html>

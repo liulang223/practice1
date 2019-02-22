@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/react.production.min.js"></script>
+    <script src='./js/react-dom.production.min.js'></script>
+    <script src='./js/browser.min.js'></script>
+    <style>
+    .bg{
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(0,0,0,0.5);
+    }
+    .dia-box{
+        width: 500px;
+        height: 500px;
+        background: #fff;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%) 
+    }
+    .dia-header{
+        background: #000;
+        width: 100%;
+        height: 50px; 
+    }
+    .dia-header div{
+        color: #fff;
+    }
+    .dia-header div:first-child{
+        float: left;
+        transform: translate(10px,10px)
+    }
+    .dia-header div:last-child{
+       float:right;
+       transform: translate(-10px,10px)
+    }
+    </style>
+</head>
+<body>
+    <div id='root'></div>
+    <script type='text/babel'>
+    class Button extends React.Component{
+        constructor(props){
+            super(props);
+        }
+        show(){
+          this.props.showlog(true,this.props.name)
+        }
+        render(){
+            return (<div>
+        <button onClick={this.show.bind(this)}>{this.props.name}</button>
+        </div>)
+        } 
+    }
+    class Dialog extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={
+                name:'',
+                isshow:false
+            }
+        }
+        changelog(isshow,name){
+            console.log(isshow,name);
+            
+           this.setState({
+               isshow:isshow,
+               name:name
+           })
+        }
+        render(){
+          return (
+              <div>
+          <Button name='登陆' showlog={this.changelog.bind(this)}/>
+          <Button name='注册' showlog={this.changelog.bind(this)}/>
+          <Background title={this.state.name} hidelog={this.changelog.bind(this)} isshow={this.state.isshow}/>
+              </div>
+              )
+        }
+    }
+    class Background extends React.Component{
+        constructor(props){
+            super(props);
+        }
+        close(){
+            this.props.hidelog(false)
+        }
+        render(){
+            let style={
+                display:this.props.isshow?'block':'none'
+            }
+          return <div class='bg' style={style}>
+          <div class='dia-box'>
+          <div class='dia-header'>
+          <div>{this.props.title}</div>
+          <div onClick={this.close.bind(this)}>X</div>
+          </div>
+          <div class='dia-body'>
+          {this.props.title=='登陆'?<Login/>:<Register/>}
+          </div>
+           </div>
+              </div>
+        }
+    }
+    function Login() {
+        return <h1> 登陆</h1>
+    }
+    function Register() {
+        return <h1> 注册</h1>
+    }
+    ReactDOM.render(<Dialog/>,document.getElementById('root'))
+    </script>
+</body>
+</html>
