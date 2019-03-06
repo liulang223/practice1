@@ -20,8 +20,8 @@ public ListNode Roovedupliccate(ListNode head){
 public ListNode Reverse(ListNode head){
     if (head == null)
       {return null}
-    cur = head;
-    dummy.next =null;
+    ListNode cur = head;
+    ListNode dummy.next =null;
     while(cur!=null){
         ListNode next =cur.next;
         cur.next=dummy.next;
