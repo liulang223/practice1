@@ -11,7 +11,7 @@
 </template>
 <style scoped>
 .detail h2{
-    text-align: center;
+    text-align: center
 }
 </style>
 <script>
