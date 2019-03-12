@@ -23,7 +23,22 @@
         `,
         props:['msg']
     })
-    
+    new Vue({
+        el:'#app',
+        data:{
+            num:0
+        },
+        components:{
+            'whatever':{
+                template:` <h1>hello world</h1>`,
+            }
+        },
+        methods:{
+            add(){
+                this.num++
+            }
+        }
+    })
     </script>
 </body>
 </html>
