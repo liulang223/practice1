@@ -13,7 +13,16 @@
         <liulang msg='1' @add1='add'></liulang>
     </div>
     
-    <script>
+    <script> 
+    Vue.component('liulang',{
+        template:`
+        <div>
+        <button @click="$emit('add1')">add</button>//引号不能重叠使用，单引套双引或者双引套单引
+        <h1>{{msg}}</h1>
+         </div>
+        `,
+        props:['msg']
+    })
    
    new Vue({
         el:'#app',
