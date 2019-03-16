@@ -13,16 +13,7 @@
         <p v-for='(item, index) in obj':key='index'>{{item}}</p>
     </div>
     <script>
-    new Vue({
-        el:'#app',
-        data:{
-            num:10,
-            arr:[1,2,3,4,5],
-            obj:{
-                age:'18',
-                name:'sss',
-            }
-        },  
+
         methods:{
            change(){
                Vue.set(this.obj,'name','ls');
