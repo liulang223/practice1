@@ -54,27 +54,27 @@
                 </div>
         }
     }
-    class Army2 extends React.Component{
-        constructor(props){
-            super(props);
-            this.state={
-                count:50
-            }
-        }
-        change(num){
-           this.setState({
-               count:this.state.count+num
-           })
-           this.props.changeC(num);
-        }
-        render(props){
-            return <div>
-                <h3>{this.props.msg}</h3>
-                <h3>{this.state.count}</h3>
-                <button  onClick={this.change.bind(this,10)}>调兵</button>
-                </div>
-        }
-    }
+    // class Army2 extends React.Component{
+    //     constructor(props){
+    //         super(props);
+    //         this.state={
+    //             count:50
+    //         }
+    //     }
+    //     change(num){
+    //        this.setState({
+    //            count:this.state.count+num
+    //        })
+    //        this.props.changeC(num);
+    //     }
+    //     render(props){
+    //         return <div>
+    //             <h3>{this.props.msg}</h3>
+    //             <h3>{this.state.count}</h3>
+    //             <button  onClick={this.change.bind(this,10)}>调兵</button>
+    //             </div>
+    //     }
+    // }
     ReactDOM.render(<Totalarmy msg='国王士兵'/>,document.getElementById('root'));
     </script>
 </body>
