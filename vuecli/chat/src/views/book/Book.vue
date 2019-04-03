@@ -1,52 +1,42 @@
 <template>
-<div>
-    <swipe class="my-swipe">
-  <swipe-item class="slide1"></swipe-item>
-  <swipe-item class="slide2"></swipe-item>
-  <swipe-item class="slide3"></swipe-item>
-</swipe>
+<div id ='map'>
+
 </div>
 </template>
 <script>
-require('vue-swipe/dist/vue-swipe.css');
-import { Swipe, SwipeItem } from 'vue-swipe';
+import Map from 'ol/Map';
+import View from 'ol/View';
+import TileLayer from 'ol/layer/Tile';
+import XYZ from 'ol/source/XYZ';
+ new Map({
+  target: 'map',
+  layers: [
+    new TileLayer({
+      source: new XYZ({
+        url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+      })
+    })
+  ],
+  view: new View({
+    center: [0, 0],
+    zoom: 2
+  })
+ })
 export default {
-    components: {
-    'swipe': Swipe,
-    'swipe-item': SwipeItem
-  },
-    created(){
+  created(){
         let obj = {
-            tittle:'書籍',
-            className:'book',
+            tittle:'书籍',
+            className:'book'
         }
         this.$emit('changeNav',obj)
-    },
+        this.getData()
+    }
+    
     
 }
 </script>
-<style scoped>
-.my-swipe {
-  height: 200px;
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-}
 
-.slide1 {
-  background-color: #0089dc;
-  color: #fff;
-}
 
-.slide2 {
-  background-color: #ffd705;
-  color: #000;
-}
 
-.slide3 {
-  background-color: #ff2d4b;
-  color: #fff;
-}
-</style>
 
 
