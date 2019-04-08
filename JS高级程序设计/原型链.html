@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function SuperType (name) {
+        this.name = name;
+        this.colors = ['red', 'blue', 'black'];
+    }
+    SuperType.pretotype.sayName = function () {
+        alert (this.name);
+    }
+    function SubType () {
+        SuperType.call (this,name);
+        this.age = age;
+    }
+    // SubType.prototype = new SuperType ();
+    // SubType.prototype.constructor = SubType;
+    SubType.prototype.sayAge = function () {
+        alert (this.age);
+    }
+    function inheritPrototype (SubType, SuperType) {
+        var pretotype = object (SuperType.prototype);
+        pretotype.constructor = SubType;
+        SubType.prototype = pretotype;
+    }
+    </script>
+</body>
+</html>
