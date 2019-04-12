@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div  id='div1' style= 'width: 40px; height: 40px'></div>
+    <script>
+    function $(str) {
+        return new Jquery (str);
+    }
+    function Jquery(str) {
+        this.eles = [];
+        var sel = str.charAt(0);
+        var name = str.substr(1);
+        if (sel == '#') {
+            this.eles.push(document.getElementById(name));
+        }else if (sel == ".") {
+            this.eles = document.getElementsByClassName(name);
+        }
+    }
+    Jquery.prototype.css = function(arg1,arg2) {
+        if(typeof arg1 == 'string' && typeof arg2 == 'string') {
+            this.eles.map (function(ele,index){
+                ele.style[arg1] = arg2;
+            })
+        }else if(typeof arg1 == 'object' && arg2 == undefined) {
+            this.eles.map(function (ele,index) {
+                for (key in arg1) {
+                    ele.style[key] = arg1[key];
+                }
+            })
+        }
+        return this;
+
+    }
+    Jquery.prototype.on = function(eventName,handle){
+        this.eles.map (function(ele,index) {
+            ele.addEventListener (eventName,handle);
+        })
+        return this;
+    }
+
+    $('#div1').css("background","blue");
+    $('#div1').css({background : 'red',height : '300px'}).on('click',function(){console.log('onclick')});
+    </script>
+</body>
+</html>
