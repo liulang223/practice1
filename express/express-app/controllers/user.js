@@ -24,6 +24,4 @@ exports.login = function (req,res,next) {
 
 exports.do_login = function (req,res,next) {
 
-    var name = 
-
 }
