@@ -25,7 +25,7 @@
     Jquery.prototype.css = function(arg1,arg2) {
         if(typeof arg1 == 'string' && typeof arg2 == 'string') {
             this.eles.map (function(ele,index){
-                ele.style[arg1] = arg2;
+                ele.style[arg1] = arg2;//动态属性
             })
         }else if(typeof arg1 == 'object' && arg2 == undefined) {
             this.eles.map(function (ele,index) {

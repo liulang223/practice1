@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function callbackAbyss(a, b, cb) {
+      setTimeout(function () {
+          cb(a + b);
+      }, 200)
+  }
+  
+  // 回调深渊 - 调用
+  callbackAbyss(1, 2, function (result) {
+     let count = 1;
+     if (result > 2) {
+         console.log('回调深渊第' + count++ + '次输出结果：', result);
+         callbackAbyss(result, 2, function (result) {
+             console.log('回调深渊第' + count++ + '次输出结果：', result);
+             if (result > 4) {
+                 callbackAbyss(result, 2, function (result) {
+                     console.log('回调深渊第' + count + '次输出结果：', result);
+                 })
+             }
+         })
+     }
+ })
+
+   function callbackAbyssEs6(a, b, cb) {
+     return new Promise(function (resolve, reject) {
+         setTimeout(function () {
+             resolve(a + b);
+         }, 1000)
+     })
+ }
+ // 回调深渊 - ES6 - 调用
+ callbackAbyssEs6(1, 2)
+     .then(function (result) {
+        if (result > 2) {
+             console.log('es6回调深渊第1次输出结果：', result);
+             return callbackAbyssEs6(2, result);
+         }
+     })
+     .then(function (result) {
+         if (result > 4) {
+            console.log('es6回调深渊第2次输出结果：', result);
+             return callbackAbyssEs6(result, 2);
+         }
+     })
+
+    </script>
+</body>
+</html>
