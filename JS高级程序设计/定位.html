@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 100px;
+        height: 100px;
+    }
+    #div1{
+         left: 100px;
+          top: 100px;
+          background: #000;
+    }
+    #div2{
+        position: absolute;
+        background: red;
+    }
+    #div3{
+        display: flex;
+        width: 200px;
+        height: 200px;
+        background: #000;
+        align-items: center;   
+        margin-top: 100px;     
+    }
+    #div4{
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+    </style>
+</head>
+<body>
+    //触发BFC
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3">
+        <div id="div4"></div>
+    </div>
+</body>
+</html>
