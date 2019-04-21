@@ -15,7 +15,15 @@
         var obox = document.querySelector('.box');
         var obtn = document.querySelector('.btn');
         var obj = []
-       
+        obtn.onclick = function () {
+            var arr = []
+            for (var i = 0; i < 5; i++) {
+              arr.push(Math.floor(Math.random()*10));
+            }
+            obox.innerText=arr
+            location.hash=Math.random();
+            obj[location.hash]=arr
+        }
         window.onhashchange=function(){
             obox.innerText=obj[location.hash];
         }
