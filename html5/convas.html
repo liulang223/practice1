@@ -6,37 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #can{
-            width: 600px;
-            height: 400px;
-            background: #000;
-        }
+      #myCanvas{
+          background: #000;
+          border: blue 5px solid;
+      }
     </style>
 </head>
 <body>
-    <canvas id='can' width="600" height="400"></canvas>
+    <canvas id='myCanvas' width=600 height=400 > </canvas>
     <script>
-        var ocan=document.getElementById('can');
-        var context=ocan.getContext('2d');
-        // context.beginPath();
-        // context.strokeStyle='white';
-        // context.moveTo(,);
-        context.lineWidth='1';
-        // context.stroke();
-        ocan.onmousedown=function(e){
-         context.beginPath();
-         context.strokeStyle='white';
-         context.moveTo(e.clientX,e.clientY);
-         ocan.onmousemove=function(e){
-           context.lineTo(e.clientX,e.clientY);
-           context.stroke();
-         }
+     let   oCanvas = document.getElementById('myCanvas');
+     let  context =oCanvas.getContext('2d');
+     context.lineWidth = '.1';
+     oCanvas.onmousedown= function(e){
+        context.beginPath();
+        context.strokeStyle = 'white';
+        context.linCap = 'round';
+        context.moveTo(e.clientX,e.clientY);
+        oCanvas.onmousemove = function(e){
+            context.lineTo(e.clientX,e.clientY); 
+            context.stroke();          
         }
-        document.onmouseup=function(){
-           ocan.onmousemove=null;
-        }
-
+     }
+     oCanvas.onmouseup = function(){
+         oCanvas.onmousemove = null;
+     }
     </script>
-
+    
 </body>
 </html>
