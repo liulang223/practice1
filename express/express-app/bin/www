@@ -26,7 +26,7 @@ var server = http.createServer(app);
  */
 
 server.listen(port);
-server.on('error', onError);
+server.on('error', onError);// on方法  用来监听事件
 server.on('listening', onListening);
 
 /**

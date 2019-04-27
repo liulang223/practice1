@@ -1,6 +1,15 @@
 var db = require('./db.js');
 exports.insert_data = function(name,pass,callback) {
-  var sql = 'insert into user(User,Password) values(?,?)';
+  var sql = 'insert into t_users(ACCOUNT,PASSWORD) values(?,?)';
+  db.query(sql,[name,pass],callback);
+}
+exports.check_name = function(name,callback){
+  var sql = 'select * from t_users where ACCOUNT=? ';
+  db.query(sql,[name],callback);
+}
+
+exports.check_login = function(name,pass,callback){
+  var sql = 'select * from t_users where ACCOUNT=? and PASSWORD=?';
   db.query(sql,[name,pass],callback);
 }
 //连接数据库
