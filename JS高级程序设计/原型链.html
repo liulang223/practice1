@@ -8,27 +8,7 @@
 </head>
 <body>
     <script>
-    function SuperType (name) {
-        this.name = name;
-        this.colors = ['red', 'blue', 'black'];
-    }
-    SuperType.pretotype.sayName = function () {
-        alert (this.name);
-    }
-    function SubType () {
-        SuperType.call (this,name);
-        this.age = age;
-    }
-    // SubType.prototype = new SuperType ();
-    // SubType.prototype.constructor = SubType;
-    SubType.prototype.sayAge = function () {
-        alert (this.age);
-    }
-    function inheritPrototype (SubType, SuperType) {
-        var pretotype = object (SuperType.prototype);
-        pretotype.constructor = SubType;
-        SubType.prototype = pretotype;
-    }
+   
     </script>
 </body>
 </html>
