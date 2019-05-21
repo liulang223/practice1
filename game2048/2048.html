@@ -1018,7 +1018,16 @@
 
       //上按键处理
 
-      
+      dealToUp: function(c) {
+
+        var next;
+
+        for (r = 0; r < obj.ROW; r++) {
+
+          next = obj.find(r, c, r + 1, obj.ROW, 1); //找出第一个不为0的位置
+
+          if (next == null) break;
+
           //如果当前位置为0
 
           if (arr[r][c] == 0) {
